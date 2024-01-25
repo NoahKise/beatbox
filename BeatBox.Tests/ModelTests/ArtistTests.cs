@@ -6,8 +6,13 @@ using System;
 namespace BeatBox.Tests
 {
   [TestClass]
-  public class CategoryTests
+  public class CategoryTests : IDisposable
   {
+    public void Dispose()
+    {
+      Artist.ClearAll();
+    }
+    
     [TestMethod]
     public void ArtistConstructor_CreateInstanceOfArtist_Artist()
     {
@@ -31,6 +36,15 @@ namespace BeatBox.Tests
         List<Album> expected = new List<Album> {blurAlbum};
         blur.AddAlbum(blurAlbum);
         CollectionAssert.AreEqual(expected, blur.Albums);
+    }
+
+    [TestMethod]
+    public void FindArtist_ReturnsArtistById_Artist()
+    {
+        Artist eminem = new("eminem");
+        Artist mariahCarey = new("Mariah Carey");
+        Artist foundArtist = Artist.FindArtist(1);
+        Assert.AreEqual(eminem, foundArtist);
     }
   }
 }
