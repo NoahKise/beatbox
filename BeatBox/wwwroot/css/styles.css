@@ -21,10 +21,43 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: black;
 }
 
 svg {
-  height: 50px;
-  width: 50px;
+  margin: 8px;
+  height: 34px;
+  width: 34px;
+}
+
+#header {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about {
+  text-align: justify;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome {
+  font-style: italic;
+  margin-bottom: 20px;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#homePage {
+  
+  color: #e0ca65;
+  margin-top: 50px;
+}
+
+body {
+  background: rgb(224, 202, 101);
+  background: linear-gradient(90deg, rgba(224, 202, 101, 1) 7%, rgba(41, 37, 37, 1) 20%, rgba(41, 37, 37, 1) 80%, rgba(224, 202, 101, 1) 93%);
 }

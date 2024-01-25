@@ -1,0 +1,12 @@
+@{
+    Layout = "_Layout";
+}
+
+<form action="/artists/@Model.Id/albums" method="post">
+    <h3 class="formTitle">Add @Model.Name Album</h3>
+    <input id="artistId" name="artistId" type="hidden" value="@Model.Id">
+    <label for="albumName">Name</label>
+    <input id="albumName" name="albumName" type="text">
+    <br>
+    <button type="submit">Add album</button>
+</form>
