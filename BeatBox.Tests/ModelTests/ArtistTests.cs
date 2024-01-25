@@ -22,5 +22,15 @@ namespace BeatBox.Tests
       Artist simonAndGarfunkel = new(name);
       Assert.AreEqual(simonAndGarfunkel.Name, name);
     }
+
+    [TestMethod]
+    public void AddAlbum_AddAlbumToAlbums_List()
+    {
+        Artist blur = new("blur");
+        Album blurAlbum = new("blur");
+        List<Album> expected = new List<Album> {blurAlbum};
+        blur.AddAlbum(blurAlbum);
+        CollectionAssert.AreEqual(expected, blur.Albums);
+    }
   }
 }

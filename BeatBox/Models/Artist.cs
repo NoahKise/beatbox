@@ -16,5 +16,10 @@ namespace BeatBox.Models
           Id = _instances.Count;
           Albums = new List<Album> { };
         }
+
+        public void AddAlbum(Album album)
+        {
+          Albums.Add(album);
+        }
     }
 }
