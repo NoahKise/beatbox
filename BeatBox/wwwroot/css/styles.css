@@ -1,0 +1,30 @@
+.logoImage {
+  height: 150px;
+}
+
+#logoText {
+  height: 100px;
+  margin-top: 0px;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+#centerNavbar {
+  display: flex;
+  flex-direction: column;
+}
+
+#iconRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+}
+
+svg {
+  height: 50px;
+  width: 50px;
+}
