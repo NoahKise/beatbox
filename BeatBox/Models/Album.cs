@@ -15,5 +15,20 @@ namespace BeatBox.Models
             Id = _instances.Count;
         }
 
+        public static Album FindAlbum(int id)
+        {
+            return _instances[id - 1];
+        }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
+        }
+
+        public static List<Album> GetAll()
+        {
+            return _instances;
+        }
+
     }
 }
