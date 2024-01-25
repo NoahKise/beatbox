@@ -8,7 +8,7 @@ namespace BeatBox.TestTools
     {
         public void Dispose()
         {
-            Artist.ClearAll();
+            Album.ClearAll();
         }
 
         [TestMethod]
@@ -16,6 +16,15 @@ namespace BeatBox.TestTools
         {
             Album newAlbum = new("21");
             Assert.AreEqual(typeof(Album), newAlbum.GetType());
+        }
+
+        [TestMethod]
+        public void GetAll_GetAllAlbumInstances_List()
+        {
+            Album nineteen = new("19");
+            Album twentyOne = new("21");
+            List<Album> expected = new List<Album> {nineteen, twentyOne};
+            CollectionAssert.AreEqual(expected, Album.GetAll());
         }
     }
 }
