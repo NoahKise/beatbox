@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models; //change
+using BeatBox.Models;
 
-namespace ProjectName.TestTools //change
+namespace BeatBox.TestTools
 {
   [TestClass]
-  public class ClassNameTests //change
+  public class AlbumTests
   {
     
   }
