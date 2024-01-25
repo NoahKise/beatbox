@@ -31,5 +31,10 @@ namespace BeatBox.Models
         {
             _instances.Clear();
         }
+
+        public static List<Artist> GetAll()
+        {
+            return _instances;
+        }
     }
 }

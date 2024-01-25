@@ -46,5 +46,14 @@ namespace BeatBox.Tests
         Artist foundArtist = Artist.FindArtist(1);
         Assert.AreEqual(eminem, foundArtist);
     }
+
+    [TestMethod]
+    public void GetAllArtists_ReturnsInstances_List()
+    {
+        Artist eminem = new("eminem");
+        Artist mariahCarey = new("Mariah Carey");
+        List<Artist> expected = new List<Artist> {eminem, mariahCarey};
+        CollectionAssert.AreEqual(expected, Artist.GetAll());
+    }
   }
 }
