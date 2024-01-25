@@ -23,8 +23,17 @@ namespace BeatBox.TestTools
         {
             Album nineteen = new("19");
             Album twentyOne = new("21");
-            List<Album> expected = new List<Album> {nineteen, twentyOne};
+            List<Album> expected = new List<Album> { nineteen, twentyOne };
             CollectionAssert.AreEqual(expected, Album.GetAll());
+        }
+
+        [TestMethod]
+        public void FindAlbum_ReturnsAlbumById_Album()
+        {
+            Album nineteen = new("19");
+            Album twentyOne = new("21");
+            Album foundAlbum = Album.FindAlbum(1);
+            Assert.AreEqual(nineteen, foundAlbum);
         }
     }
 }
