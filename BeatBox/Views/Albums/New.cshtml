@@ -1,7 +1,7 @@
 @{
     Layout = "_Layout";
 }
-
+<div class="form">
 <form action="/artists/@Model.Id/albums" method="post">
     <h3 class="formTitle">Add @Model.Name Album</h3>
     <input id="artistId" name="artistId" type="hidden" value="@Model.Id">
@@ -10,3 +10,4 @@
     <br>
     <button type="submit">Add album</button>
 </form>
+</div>

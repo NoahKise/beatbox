@@ -4,9 +4,11 @@
 
 @using BeatBox.Models;
 
-<h1>Your Artists</h1>
+<div id="artistsList">
+<h2>Your Artists</h2>
 
 @foreach(Artist artist in Model)
 {
   <h3><a href="/artists/@artist.Id">@artist.Name</a></h3>
 }
+</div>

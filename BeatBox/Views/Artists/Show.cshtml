@@ -3,8 +3,8 @@
 }
 
 @using BeatBox.Models;
-
-<h3>Albums</h3>
+<div id="albumsList">
+<h3>@Model["artist"].Name Albums</h3>
 
 <ul>
     @foreach (Album album in @Model["albums"])
@@ -13,5 +13,7 @@
     }
 </ul>
 
-<p><a href="/artists">Return to Artist List</a><p>
-<p><a href='/artists/@Model["artist"].Id/albums/new'>Add another album!</a></P>
+<button><a href="/artists">Return to Artist List</a></button>
+<button><a href='/artists/@Model["artist"].Id/albums/new'>Add another album!</a></button>
+
+</div>

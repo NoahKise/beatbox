@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@using BeatBox.Models;
+
+<div class="form">
+<form action="/artists/1/albums" method="get">
+    <h3 class="formTitle">Artist Search</h3>
+    <label for="artistName"></label>
+    <input id="artistName" name="artistName" type="text" placeholder="Gumtooth">
+    <br>
+    <button type="submit">Go!</button>
+</form>
+</div>
+<!-- {Artists.GetAll().Where(artist => artist.Name > search)} -->

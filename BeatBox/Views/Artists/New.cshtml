@@ -1,11 +1,12 @@
 @{
     Layout = "_Layout";
 }
-
-<form action="/artists" method="post">
-    <h3 class="formTitle">New Artist</h3>
-    <label for="artistName">Name</label>
-    <input id="artistName" name="artistName" type="text">
-    <br>
-    <button id="formButton" type="submit">Submit</button>
-</form>
+<div id="addForm">
+    <form action="/artists" method="post">
+        <h2 class="formTitle">New Artist</h2>
+        <label for="artistName"></label>
+        <input id="artistName" name="artistName" type="text" placeholder="Gumtooth">
+        <br>
+        <button id="formButton" type="submit">Submit</button>
+    </form>
+</div>
